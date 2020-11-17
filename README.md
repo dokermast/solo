@@ -16,6 +16,7 @@ php artisan db:seed
 
 
 register            POST     /register               {form-data} 'login', 'password'
+
 login               POST     /login                  {form-data} 'login', 'password'
 
 ====== use Bearer Token ==================================================================
@@ -23,7 +24,11 @@ login               POST     /login                  {form-data} 'login', 'passw
 refresh             GET      /refresh
 
 get users bots       GET     /bots
+
 get users bot        GET     /bot/{id}
+
 create users bot     POST    /bots                   {form-data} 'name', 'description'
+
 update users bot     PUT     /bots/{id}              {form-data} 'name' && || 'description'
+
 delete users bot     DELETE  /bots/{id}
